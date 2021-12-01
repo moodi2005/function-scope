@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="hi" id="pie" value="pie" onchange="piep()">pie
+    <input type="radio" name="hi" id="doughnut" value="doughnut" onchange="piep()">doughnut
+    <h1 id="demo"></h1>
+    <script>
+        const pie = document.getElementById("pie");
+        const doughnut = document.getElementById("doughnut");
+        const demo = document.getElementById("demo");
+        var res;
+        function piep() {
+            if (pie.checked === true) {
+                var res = pie.value;
+                demo.innerHTML = res;
+            };
+            if (doughnut.checked === true) {
+                var res = doughnut.value;
+                demo.innerHTML = res;
+            }
+        };
+        console.log(res); //undifind.
+    </script>
+</body>
+</html>
