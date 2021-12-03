@@ -8,16 +8,19 @@
 </head>
 
 <body>
-    <input type="radio" name="hi" id="pie" value="pie" onchange="start()">pie
-    <input type="radio" name="hi" id="doughnut" value="doughnut" onchange="start()" checked>doughnut
+    <input type="radio" name="hi" id="pie" value="pie" onchange="start()"/>pie
+    <input type="radio" name="hi" id="doughnut" value="doughnut" onchange="start()" checked />doughnut
     <h1 id="demo"></h1>
-    <script>
+
+</body>
+ 
+        <script>
         const pie = document.getElementById("pie");
         const doughnut = document.getElementById("doughnut");
         const demo = document.getElementById("demo");
-        var res = 'red';
+        let res = 'red';
 
-        function piep() {
+        const  piep= () => {
             if (pie.checked === true) {
                 res = pie.value;
             } else if (doughnut.checked === true) {
@@ -26,13 +29,12 @@
             return res;
         }
 
-        function start() {
+        const = start = () =>{
             piep();
             console.log(res);
             return res;
         }
         demo.innerHTML = res;
     </script>
-</body>
-
+    
 </html>
